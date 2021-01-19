@@ -5,10 +5,6 @@ on:
     branches:
     - master
 
-defaults:
-  run:
-    working-directory: src/AutoStateTransitions
-
 jobs:
   build:
 
@@ -25,7 +21,7 @@ jobs:
       run: dotnet restore src
     
     - name: Build with dotnet
-      run: dotnet build src --configuration Release
+      run: dotnet build src --configuration Release ./src/azure-boards-automate-state-transitions.sln
       
     - name: Test with dotnet
       run: dotnet test src --configuration Release
