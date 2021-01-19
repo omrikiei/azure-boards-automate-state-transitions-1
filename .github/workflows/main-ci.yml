@@ -21,7 +21,7 @@ jobs:
       run: dotnet restore src
     
     - name: Build with dotnet
-      run: dotnet build src --configuration Release ./src/azure-boards-automate-state-transitions.sln
+      run: dotnet build ./src/azure-boards-automate-state-transitions.sln --configuration Release
       
     - name: Test with dotnet
-      run: dotnet test src --configuration Release
+      run: dotnet test ./src/azure-boards-automate-state-transitions.sln --configuration Release
